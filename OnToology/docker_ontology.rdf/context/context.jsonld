@@ -1,0 +1,137 @@
+{
+  "@context" : {
+    "hasPackages" : {
+      "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#hasPackages",
+      "@type" : "@id"
+    },
+    "isVersionOf" : {
+      "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#isVersionOf",
+      "@type" : "@id"
+    },
+    "LayerModification" : {
+      "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#LayerModification"
+    },
+    "hasLayer" : {
+      "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#hasLayer",
+      "@type" : "@id"
+    },
+    "hasImage" : {
+      "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#hasImage",
+      "@type" : "@id"
+    },
+    "hasRevision" : {
+      "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#hasRevision",
+      "@type" : "@id"
+    },
+    "hasVersion" : {
+      "@id" : "http://purl.org/net/wicus-stack#hasVersion",
+      "@type" : "@id"
+    },
+    "PackageVersion" : {
+      "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#PackageVersion"
+    },
+    "hasVulnerability" : {
+      "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#hasVulnerability",
+      "@type" : "@id"
+    },
+    "isPresent" : {
+      "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#isPresent",
+      "@type" : "@id"
+    },
+    "builds" : {
+      "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#builds",
+      "@type" : "@id"
+    },
+    "containPackages" : {
+      "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#containPackages",
+      "@type" : "@id"
+    },
+    "isPackageOf" : {
+      "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#isPackageOf",
+      "@type" : "@id"
+    },
+    "SecurityRevision" : {
+      "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SecurityRevision"
+    },
+    "FileSystem" : {
+      "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#FileSystem"
+    },
+    "SoftwareImage" : {
+      "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SoftwareImage"
+    },
+    "isAffectedBy" : {
+      "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#isAffectedBy",
+      "@type" : "@id"
+    },
+    "hasFileSystem" : {
+      "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#hasFileSystem",
+      "@type" : "@id"
+    },
+    "SoftwareVulnerability" : {
+      "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SoftwareVulnerability"
+    },
+    "DockerFile" : {
+      "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#DockerFile"
+    },
+    "affectsOS" : {
+      "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#affectsOS",
+      "@type" : "@id"
+    },
+    "SoftwareComponent" : {
+      "@id" : "http://purl.org/net/wicus-stack#SoftwareComponent"
+    },
+    "SoftwarePackage" : {
+      "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SoftwarePackage"
+    },
+    "fixPackageVersion" : {
+      "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#fixPackageVersion",
+      "@type" : "@id"
+    },
+    "ImageVersion" : {
+      "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#ImageVersion"
+    },
+    "isModifiedBy" : {
+      "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#isModifiedBy",
+      "@type" : "@id"
+    },
+    "DeploymentScript" : {
+      "@id" : "http://purl.org/net/wicus-stack#DeploymentScript"
+    },
+    "Version" : {
+      "@id" : "http://purl.org/net/wicus-stack#Version"
+    },
+    "isLayerOf" : {
+      "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#isLayerOf",
+      "@type" : "@id"
+    },
+    "Image" : {
+      "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#Image"
+    },
+    "ImageLayer" : {
+      "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#ImageLayer"
+    },
+    "deployedOn" : {
+      "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#deployedOn",
+      "@type" : "@id"
+    },
+    "fixVulnerability" : {
+      "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#fixVulnerability",
+      "@type" : "@id"
+    },
+    "modifyLayer" : {
+      "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#modifyLayer",
+      "@type" : "@id"
+    },
+    "composedBy" : {
+      "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#composedBy",
+      "@type" : "@id"
+    },
+    "OperatingSystem" : {
+      "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#OperatingSystem"
+    },
+    "usesOS" : {
+      "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#usesOS",
+      "@type" : "@id"
+    }
+  }
+}

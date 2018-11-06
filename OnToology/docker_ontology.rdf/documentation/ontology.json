@@ -1,0 +1,291 @@
+[ {
+  "@id" : "http://purl.org/net/wicus-stack#hasVersion",
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#PackageVersion"
+  } ]
+}, {
+  "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "http://purl.org/net/wicus-stack"
+  } ]
+}, {
+  "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#DockerFile",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/net/wicus-stack#DeploymentScript"
+  } ]
+}, {
+  "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#FileSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#Image",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#ImageLayer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#ImageVersion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/net/wicus-stack#Version"
+  } ]
+}, {
+  "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#LayerModification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#OperatingSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#PackageVersion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/net/wicus-stack#Version"
+  } ]
+}, {
+  "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SecurityRevision",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SoftwareImage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#Image"
+  } ]
+}, {
+  "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SoftwarePackage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/net/wicus-stack#SoftwareComponent"
+  } ]
+}, {
+  "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SoftwareVulnerability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#affectsOS",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SoftwareVulnerability"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#OperatingSystem"
+  } ]
+}, {
+  "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#builds",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#DockerFile"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SoftwareImage"
+  } ]
+}, {
+  "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#composedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SoftwareImage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#ImageLayer"
+  } ]
+}, {
+  "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#containPackages",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#deployedOn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SoftwarePackage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#FileSystem"
+  } ]
+}, {
+  "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#fixPackageVersion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SecurityRevision"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#PackageVersion"
+  } ]
+}, {
+  "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#fixVulnerability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SecurityRevision"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SoftwareVulnerability"
+  } ]
+}, {
+  "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#hasFileSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#OperatingSystem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#FileSystem"
+  } ]
+}, {
+  "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#hasImage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#DockerFile"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SoftwareImage"
+  } ]
+}, {
+  "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#hasLayer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SoftwareImage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#ImageLayer"
+  } ]
+}, {
+  "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#hasPackages",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#OperatingSystem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SoftwarePackage"
+  } ]
+}, {
+  "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#hasRevision",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#PackageVersion"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SecurityRevision"
+  } ]
+}, {
+  "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#hasVulnerability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#PackageVersion"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SoftwareVulnerability"
+  } ]
+}, {
+  "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#isAffectedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#OperatingSystem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SoftwareVulnerability"
+  } ]
+}, {
+  "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#isLayerOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#ImageLayer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#Image"
+  } ]
+}, {
+  "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#isModifiedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#ImageLayer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#PackageVersion"
+  } ]
+}, {
+  "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#isPackageOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.org/net/wicus-stack#SoftwareComponent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#OperatingSystem"
+  } ]
+}, {
+  "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#isPresent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#isVersionOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#PackageVersion"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://purl.org/net/wicus-stack#SoftwareComponent"
+  } ]
+}, {
+  "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#linkeddatafragmensserver",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#DockerFile" ]
+}, {
+  "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#linkeddatafragmensserverImage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#Image" ]
+}, {
+  "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#linkeddatafragmensserverImageLayer1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#ImageLayer" ]
+}, {
+  "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#linkeddatafragmensserverImageLayer2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#ImageLayer" ]
+}, {
+  "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#linkeddatafragmensserverImageLayer3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#ImageLayer" ]
+}, {
+  "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#modifyLayer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#PackageVersion"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#ImageLayer"
+  } ]
+}, {
+  "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#package1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SoftwarePackage" ],
+  "http://purl.org/net/wicus-stack#hasVersion" : [ {
+    "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#version11"
+  } ]
+}, {
+  "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#package2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SoftwarePackage" ],
+  "http://purl.org/net/wicus-stack#hasVersion" : [ {
+    "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#version12"
+  } ]
+}, {
+  "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#package3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SoftwarePackage" ],
+  "http://purl.org/net/wicus-stack#hasVersion" : [ {
+    "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#version21"
+  } ]
+}, {
+  "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#usesOS",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#ImageLayer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#OperatingSystem"
+  } ]
+}, {
+  "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#version11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#PackageVersion" ],
+  "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#hasVulnerability" : [ {
+    "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#vulnerability123"
+  } ]
+}, {
+  "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#version12",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#PackageVersion" ],
+  "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#hasVulnerability" : [ {
+    "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#vulnerability123"
+  } ]
+}, {
+  "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#version21",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#PackageVersion" ]
+}, {
+  "@id" : "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#vulnerability123",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SoftwareVulnerability" ]
+} ]

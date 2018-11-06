@@ -1,0 +1,268 @@
+@prefix : <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology> .
+
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology> rdf:type owl:Ontology ;
+                                                                     owl:imports <http://purl.org/net/wicus-stack> .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/net/wicus-stack#hasVersion
+<http://purl.org/net/wicus-stack#hasVersion> rdfs:range :PackageVersion .
+
+
+###  http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#affectsOS
+:affectsOS rdf:type owl:ObjectProperty ;
+           rdfs:domain :SoftwareVulnerability ;
+           rdfs:range :OperatingSystem .
+
+
+###  http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#builds
+:builds rdf:type owl:ObjectProperty ;
+        rdfs:domain :DockerFile ;
+        rdfs:range :SoftwareImage .
+
+
+###  http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#composedBy
+:composedBy rdf:type owl:ObjectProperty ;
+            rdfs:domain :SoftwareImage ;
+            rdfs:range :ImageLayer .
+
+
+###  http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#containPackages
+:containPackages rdf:type owl:ObjectProperty .
+
+
+###  http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#deployedOn
+:deployedOn rdf:type owl:ObjectProperty ;
+            rdfs:domain :SoftwarePackage ;
+            rdfs:range :FileSystem .
+
+
+###  http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#fixPackageVersion
+:fixPackageVersion rdf:type owl:ObjectProperty ;
+                   rdfs:domain :SecurityRevision ;
+                   rdfs:range :PackageVersion .
+
+
+###  http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#fixVulnerability
+:fixVulnerability rdf:type owl:ObjectProperty ;
+                  rdfs:domain :SecurityRevision ;
+                  rdfs:range :SoftwareVulnerability .
+
+
+###  http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#hasFileSystem
+:hasFileSystem rdf:type owl:ObjectProperty ;
+               rdfs:domain :OperatingSystem ;
+               rdfs:range :FileSystem .
+
+
+###  http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#hasImage
+:hasImage rdf:type owl:ObjectProperty ;
+          rdfs:domain :DockerFile ;
+          rdfs:range :SoftwareImage .
+
+
+###  http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#hasLayer
+:hasLayer rdf:type owl:ObjectProperty ;
+          rdfs:domain :SoftwareImage ;
+          rdfs:range :ImageLayer .
+
+
+###  http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#hasPackages
+:hasPackages rdf:type owl:ObjectProperty ;
+             rdfs:domain :OperatingSystem ;
+             rdfs:range :SoftwarePackage .
+
+
+###  http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#hasRevision
+:hasRevision rdf:type owl:ObjectProperty ;
+             rdfs:domain :PackageVersion ;
+             rdfs:range :SecurityRevision .
+
+
+###  http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#hasVulnerability
+:hasVulnerability rdf:type owl:ObjectProperty ;
+                  rdfs:domain :PackageVersion ;
+                  rdfs:range :SoftwareVulnerability .
+
+
+###  http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#isAffectedBy
+:isAffectedBy rdf:type owl:ObjectProperty ;
+              rdfs:domain :OperatingSystem ;
+              rdfs:range :SoftwareVulnerability .
+
+
+###  http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#isLayerOf
+:isLayerOf rdf:type owl:ObjectProperty ;
+           rdfs:domain :ImageLayer ;
+           rdfs:range :Image .
+
+
+###  http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#isModifiedBy
+:isModifiedBy rdf:type owl:ObjectProperty ;
+              rdfs:domain :ImageLayer ;
+              rdfs:range :PackageVersion .
+
+
+###  http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#isPackageOf
+:isPackageOf rdf:type owl:ObjectProperty ;
+             rdfs:domain <http://purl.org/net/wicus-stack#SoftwareComponent> ;
+             rdfs:range :OperatingSystem .
+
+
+###  http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#isPresent
+:isPresent rdf:type owl:ObjectProperty .
+
+
+###  http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#isVersionOf
+:isVersionOf rdf:type owl:ObjectProperty ;
+             rdfs:domain :PackageVersion ;
+             rdfs:range <http://purl.org/net/wicus-stack#SoftwareComponent> .
+
+
+###  http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#modifyLayer
+:modifyLayer rdf:type owl:ObjectProperty ;
+             rdfs:domain :PackageVersion ;
+             rdfs:range :ImageLayer .
+
+
+###  http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#usesOS
+:usesOS rdf:type owl:ObjectProperty ;
+        rdfs:domain :ImageLayer ;
+        rdfs:range :OperatingSystem .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#DockerFile
+:DockerFile rdf:type owl:Class ;
+            rdfs:subClassOf <http://purl.org/net/wicus-stack#DeploymentScript> .
+
+
+###  http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#FileSystem
+:FileSystem rdf:type owl:Class .
+
+
+###  http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#Image
+:Image rdf:type owl:Class .
+
+
+###  http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#ImageLayer
+:ImageLayer rdf:type owl:Class .
+
+
+###  http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#ImageVersion
+:ImageVersion rdf:type owl:Class ;
+              rdfs:subClassOf <http://purl.org/net/wicus-stack#Version> .
+
+
+###  http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#LayerModification
+:LayerModification rdf:type owl:Class .
+
+
+###  http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#OperatingSystem
+:OperatingSystem rdf:type owl:Class .
+
+
+###  http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#PackageVersion
+:PackageVersion rdf:type owl:Class ;
+                rdfs:subClassOf <http://purl.org/net/wicus-stack#Version> .
+
+
+###  http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SecurityRevision
+:SecurityRevision rdf:type owl:Class .
+
+
+###  http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SoftwareImage
+:SoftwareImage rdf:type owl:Class ;
+               rdfs:subClassOf :Image .
+
+
+###  http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SoftwarePackage
+:SoftwarePackage rdf:type owl:Class ;
+                 rdfs:subClassOf <http://purl.org/net/wicus-stack#SoftwareComponent> .
+
+
+###  http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SoftwareVulnerability
+:SoftwareVulnerability rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#linkeddatafragmensserver
+:linkeddatafragmensserver rdf:type owl:NamedIndividual ,
+                                   :DockerFile .
+
+
+###  http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#linkeddatafragmensserverImage
+:linkeddatafragmensserverImage rdf:type owl:NamedIndividual ,
+                                        :Image .
+
+
+###  http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#linkeddatafragmensserverImageLayer1
+:linkeddatafragmensserverImageLayer1 rdf:type owl:NamedIndividual ,
+                                              :ImageLayer .
+
+
+###  http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#linkeddatafragmensserverImageLayer2
+:linkeddatafragmensserverImageLayer2 rdf:type owl:NamedIndividual ,
+                                              :ImageLayer .
+
+
+###  http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#linkeddatafragmensserverImageLayer3
+:linkeddatafragmensserverImageLayer3 rdf:type owl:NamedIndividual ,
+                                              :ImageLayer .
+
+
+###  http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#package1
+:package1 rdf:type owl:NamedIndividual ,
+                   :SoftwarePackage ;
+          <http://purl.org/net/wicus-stack#hasVersion> :version11 .
+
+
+###  http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#package2
+:package2 rdf:type owl:NamedIndividual ,
+                   :SoftwarePackage ;
+          <http://purl.org/net/wicus-stack#hasVersion> :version12 .
+
+
+###  http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#package3
+:package3 rdf:type owl:NamedIndividual ,
+                   :SoftwarePackage ;
+          <http://purl.org/net/wicus-stack#hasVersion> :version21 .
+
+
+###  http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#version11
+:version11 rdf:type owl:NamedIndividual ,
+                    :PackageVersion ;
+           :hasVulnerability :vulnerability123 .
+
+
+###  http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#version12
+:version12 rdf:type owl:NamedIndividual ,
+                    :PackageVersion ;
+           :hasVulnerability :vulnerability123 .
+
+
+###  http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#version21
+:version21 rdf:type owl:NamedIndividual ,
+                    :PackageVersion .
+
+
+###  http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#vulnerability123
+:vulnerability123 rdf:type owl:NamedIndividual ,
+                           :SoftwareVulnerability .
+
+
+###  Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/
