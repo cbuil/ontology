@@ -1,0 +1,16 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "base:PackageVersion" "base:DockerFile" "base:SoftwareImage" "base:Image" "base:ImageVersion" "base:SoftwarePackage" "p-plan:Step" "wicus-stack:SoftwareComponent" "wicus-stack:DeploymentStep" "wicus-stack:Version" "wicus-stack:OpenLicense" "wicus-stack:License" "wicus-stack:ConfigurationParameter" "wicus-stack:DeploymentScript" "wicus-stack:NotOpenLicense" "wicus-stack:DeploymentPlan" "p-plan:Plan" "p-plan:Variable" ; /*classes style*/
+	"wicus-stack:OpenLicense" -> "wicus-stack:License" [ label = "rdfs:subClassOf" ];
+	"wicus-stack:DeploymentStep" -> "p-plan:Step" [ label = "rdfs:subClassOf" ];
+	"wicus-stack:NotOpenLicense" -> "wicus-stack:License" [ label = "rdfs:subClassOf" ];
+	"base:ImageVersion" -> "wicus-stack:Version" [ label = "rdfs:subClassOf" ];
+	"wicus-stack:ConfigurationParameter" -> "p-plan:Variable" [ label = "rdfs:subClassOf" ];
+	"base:SoftwareImage" -> "base:Image" [ label = "rdfs:subClassOf" ];
+	"base:SoftwarePackage" -> "wicus-stack:SoftwareComponent" [ label = "rdfs:subClassOf" ];
+	"base:PackageVersion" -> "wicus-stack:Version" [ label = "rdfs:subClassOf" ];
+	"base:DockerFile" -> "wicus-stack:DeploymentScript" [ label = "rdfs:subClassOf" ];
+	"wicus-stack:DeploymentPlan" -> "p-plan:Plan" [ label = "rdfs:subClassOf" ];
+
+}

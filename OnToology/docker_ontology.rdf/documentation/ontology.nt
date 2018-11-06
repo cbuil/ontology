@@ -1,0 +1,228 @@
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/net/wicus-stack> .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/net/wicus-stack#hasVersion
+<http://purl.org/net/wicus-stack#hasVersion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#PackageVersion> .
+# 
+# http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#affectsOS
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#affectsOS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#affectsOS> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SoftwareVulnerability> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#affectsOS> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#OperatingSystem> .
+# 
+# http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#builds
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#builds> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#builds> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#DockerFile> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#builds> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SoftwareImage> .
+# 
+# http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#composedBy
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#composedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#composedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SoftwareImage> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#composedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#ImageLayer> .
+# 
+# http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#containPackages
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#containPackages> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#deployedOn
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#deployedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#deployedOn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SoftwarePackage> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#deployedOn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#FileSystem> .
+# 
+# http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#fixPackageVersion
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#fixPackageVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#fixPackageVersion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SecurityRevision> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#fixPackageVersion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#PackageVersion> .
+# 
+# http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#fixVulnerability
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#fixVulnerability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#fixVulnerability> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SecurityRevision> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#fixVulnerability> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SoftwareVulnerability> .
+# 
+# http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#hasFileSystem
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#hasFileSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#hasFileSystem> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#OperatingSystem> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#hasFileSystem> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#FileSystem> .
+# 
+# http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#hasImage
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#hasImage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#hasImage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#DockerFile> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#hasImage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SoftwareImage> .
+# 
+# http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#hasLayer
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#hasLayer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#hasLayer> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SoftwareImage> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#hasLayer> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#ImageLayer> .
+# 
+# http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#hasPackages
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#hasPackages> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#hasPackages> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#OperatingSystem> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#hasPackages> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SoftwarePackage> .
+# 
+# http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#hasRevision
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#hasRevision> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#hasRevision> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#PackageVersion> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#hasRevision> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SecurityRevision> .
+# 
+# http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#hasVulnerability
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#hasVulnerability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#hasVulnerability> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#PackageVersion> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#hasVulnerability> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SoftwareVulnerability> .
+# 
+# http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#isAffectedBy
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#isAffectedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#isAffectedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#OperatingSystem> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#isAffectedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SoftwareVulnerability> .
+# 
+# http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#isLayerOf
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#isLayerOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#isLayerOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#ImageLayer> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#isLayerOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#Image> .
+# 
+# http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#isModifiedBy
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#isModifiedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#isModifiedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#ImageLayer> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#isModifiedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#PackageVersion> .
+# 
+# http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#isPackageOf
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#isPackageOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#isPackageOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/wicus-stack#SoftwareComponent> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#isPackageOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#OperatingSystem> .
+# 
+# http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#isPresent
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#isPresent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#isVersionOf
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#isVersionOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#isVersionOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#PackageVersion> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#isVersionOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/wicus-stack#SoftwareComponent> .
+# 
+# http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#modifyLayer
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#modifyLayer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#modifyLayer> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#PackageVersion> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#modifyLayer> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#ImageLayer> .
+# 
+# http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#usesOS
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#usesOS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#usesOS> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#ImageLayer> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#usesOS> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#OperatingSystem> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#DockerFile
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#DockerFile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#DockerFile> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/wicus-stack#DeploymentScript> .
+# 
+# http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#FileSystem
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#FileSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#Image
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#Image> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#ImageLayer
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#ImageLayer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#ImageVersion
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#ImageVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#ImageVersion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/wicus-stack#Version> .
+# 
+# http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#LayerModification
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#LayerModification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#OperatingSystem
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#OperatingSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#PackageVersion
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#PackageVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#PackageVersion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/wicus-stack#Version> .
+# 
+# http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SecurityRevision
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SecurityRevision> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SoftwareImage
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SoftwareImage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SoftwareImage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#Image> .
+# 
+# http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SoftwarePackage
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SoftwarePackage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SoftwarePackage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/wicus-stack#SoftwareComponent> .
+# 
+# http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SoftwareVulnerability
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SoftwareVulnerability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#linkeddatafragmensserver
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#linkeddatafragmensserver> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#linkeddatafragmensserver> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#DockerFile> .
+# 
+# http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#linkeddatafragmensserverImage
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#linkeddatafragmensserverImage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#linkeddatafragmensserverImage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#Image> .
+# 
+# http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#linkeddatafragmensserverImageLayer1
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#linkeddatafragmensserverImageLayer1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#linkeddatafragmensserverImageLayer1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#ImageLayer> .
+# 
+# http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#linkeddatafragmensserverImageLayer2
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#linkeddatafragmensserverImageLayer2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#linkeddatafragmensserverImageLayer2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#ImageLayer> .
+# 
+# http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#linkeddatafragmensserverImageLayer3
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#linkeddatafragmensserverImageLayer3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#linkeddatafragmensserverImageLayer3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#ImageLayer> .
+# 
+# http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#package1
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#package1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#package1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SoftwarePackage> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#package1> <http://purl.org/net/wicus-stack#hasVersion> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#version11> .
+# 
+# http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#package2
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#package2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#package2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SoftwarePackage> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#package2> <http://purl.org/net/wicus-stack#hasVersion> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#version12> .
+# 
+# http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#package3
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#package3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#package3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SoftwarePackage> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#package3> <http://purl.org/net/wicus-stack#hasVersion> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#version21> .
+# 
+# http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#version11
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#version11> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#version11> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#PackageVersion> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#version11> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#hasVulnerability> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#vulnerability123> .
+# 
+# http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#version12
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#version12> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#version12> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#PackageVersion> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#version12> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#hasVulnerability> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#vulnerability123> .
+# 
+# http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#version21
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#version21> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#version21> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#PackageVersion> .
+# 
+# http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#vulnerability123
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#vulnerability123> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#vulnerability123> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.inf.utfsm.cl/di/csrg/ontologies/2018/2/docker-ontology#SoftwareVulnerability> .
+# 
+# Generated by the OWL API (version 5.1.7) https://github.com/owlcs/owlapi/
