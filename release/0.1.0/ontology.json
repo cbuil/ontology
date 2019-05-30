@@ -1,0 +1,283 @@
+[ {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@language" : "en",
+    "@value" : "Carlos Buil-Aranda"
+  }, {
+    "@language" : "es",
+    "@value" : "Hernán Vargas"
+  }, {
+    "@language" : "en",
+    "@value" : "Maximiliano Osorio"
+  } ],
+  "http://purl.org/dc/elements/1.1/title" : [ {
+    "@value" : "The DockerPedia Ontology"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@language" : "en",
+    "@value" : "dp"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@language" : "en",
+    "@value" : "http://dockerpedia.inf.utfsm.cl/vocab#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An ontology for describing containers and their software components."
+  } ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "http://purl.org/net/wicus-stack"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "0.1.0"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#DockerFile",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/net/wicus-stack#DeploymentScript"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#FileSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#Image",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#ImageVersion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/net/wicus-stack#Version"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#LayerModification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#OperatingSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/net/wicus-stack#Version"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#SecurityRevision",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#Image"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#SoftwarePackage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/net/wicus-stack#SoftwareComponent"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#SoftwareVulnerability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#affectsOS",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#SoftwareVulnerability"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#OperatingSystem"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#builds",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#DockerFile"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#composedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#containPackages",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#deployedOn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#SoftwarePackage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#FileSystem"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#fixPackageVersion",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#SecurityRevision"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#fixVulnerability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#SecurityRevision"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#SoftwareVulnerability"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#hasFileSystem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#OperatingSystem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#FileSystem"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#hasImage",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#DockerFile"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#hasLayer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#hasPackages",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#OperatingSystem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#SoftwarePackage"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#hasRevision",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#SecurityRevision"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#hasVulnerability",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#SoftwareVulnerability"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#imageIdentifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#SoftwareImage"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.org/dc/elements/1.1/identifier"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#isAffectedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#OperatingSystem"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#SoftwareVulnerability"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#isLayerOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#Image"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#isModifiedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#isPackageOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.org/net/wicus-stack#SoftwareComponent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#OperatingSystem"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#isPresent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#isVersionOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://purl.org/net/wicus-stack#SoftwareComponent"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#modifyLayer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer"
+  } ]
+}, {
+  "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#usesOS",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#ImageLayer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#OperatingSystem"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/identifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://purl.org/net/wicus-stack#hasVersion",
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://dockerpedia.inf.utfsm.cl/vocab#PackageVersion"
+  } ]
+} ]
